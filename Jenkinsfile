@@ -47,8 +47,8 @@ pipeline {
          steps {
            //sh 'docker image build -t ${REPOSITORY_TAG} .'
            sh """#!/bin/bash
-              docker build -t $IMAGE_TAG .
-              docker push $IMAGE_TAG
+              docker image build -t $IMAGE_TAG .
+              docker image push $IMAGE_TAG
            """
          }
       }
