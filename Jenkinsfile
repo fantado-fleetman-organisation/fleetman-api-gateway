@@ -46,10 +46,10 @@ pipeline {
       stage('Build and Push Image') {
          steps {
            //sh 'docker image build -t ${REPOSITORY_TAG} .'
-           sh """#!/bin/bash
+           sh '''
               docker build -t ${IMAGE_TAG} .
               docker push ${IMAGE_TAG}
-           """
+           '''
          }
       }
 
