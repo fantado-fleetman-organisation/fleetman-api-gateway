@@ -23,7 +23,7 @@ pipeline {
       stage('Preparation') {
          steps {
             cleanWs()
-            git credentialsId: 'GitHub', url: "https://github.com/fantado-fleetman-organisation/${params.SERVICE_NAME}.git""
+            git credentialsId: 'GitHub', url: "https://github.com/fantado-fleetman-organisation/${params.SERVICE_NAME}.git"
          }
       }
       stage('Build') {
